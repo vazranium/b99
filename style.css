@@ -82,3 +82,56 @@ ul li a {
 ul li a:hover {
   background-color: #111111;
 }
+
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0.5rem 0 0;
+  padding: 0;
+}
+
+header ul li {
+  display: inline-block;
+}
+
+header ul li a,
+header ul li select {
+  color: white;
+  background: none;
+  border: none;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+header ul li a:hover {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+body {
+  margin: 0;
+  padding-top: 120px; /* Adjust based on header height */
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
