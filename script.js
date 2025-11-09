@@ -22,6 +22,7 @@ fetch('data/products.json')
           <img src="${product.image_url}" alt="${product.title}" />
           <div class="product-info">
             <h3>${product.title}</h3>
+            <p><strong>Price:</strong> ${product.currency} ${product.price}</p>
             <a href="${product.product_url}" target="_blank">View Product</a>
           </div>
         `;
