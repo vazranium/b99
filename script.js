@@ -19,10 +19,10 @@ fetch('data/products.json')
         const card = document.createElement('div');
         card.className = 'product-card';
         card.innerHTML = `
-          <img src="${product.image}" alt="${product.title}" />
+          <img src="${product.image_url}" alt="${product.title}" />
           <div class="product-info">
             <h3>${product.title}</h3>
-            <a href="${product.url}" target="_blank">View Product</a>
+            <a href="${product.product_url}" target="_blank">View Product</a>
           </div>
         `;
         productGrid.appendChild(card);
