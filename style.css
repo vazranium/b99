@@ -64,7 +64,7 @@ header h1 {
 .nav-list a,
 .nav-list select {
   color: #ff6600;
-  background: none;
+  background: #000;
   border: none;
   font-size: 1rem;
   padding: 0.5rem 1rem;
