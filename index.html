@@ -2,30 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>buy99</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>buy99</h1><br>
-  <ul>
-  <li><a href="https://vazranium.github.io/b99/">Home</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
-  <li><a>Select Category -> </a></li>
-  <li>
-    <select id="categorySelect">
-    <option value="all">All Categories</option>
-    </select>
-  </li>
-  
-  </ul>
+    <h1>buy99</h1>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="https://vazranium.github.io/b99/">Home</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li class="category-label">Select Category:</li>
+        <li>
+          <select id="categorySelect" aria-label="Select product category">
+            <option value="all">All Categories</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
     <div id="visitCounter" class="visit-counter">Visits: ...</div>
-
   </header>
 
-  <div class="product-grid" id="productGrid"></div>
+  <main>
+    <section class="product-grid" id="productGrid" aria-label="Product Listings"></section>
+  </main>
 
   <script src="script.js"></script>
 </body>
