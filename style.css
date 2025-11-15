@@ -12,6 +12,15 @@ body {
   line-height: 1.5;
 }
 
+.product-grid {
+  background: #020024;
+  background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(121, 9, 44, 1) 57%, rgba(255, 102, 0, 1) 100%);
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
 /* Header */
 header {
   position: fixed;
