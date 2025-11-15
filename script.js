@@ -1,9 +1,16 @@
 const categorySelect = document.getElementById('categorySelect');
 const productGrid = document.getElementById('productGrid');
 
-fetch('data/products.json')
+fetch('data/manifest.json')
   .then(response => response.json())
-  .then(products => {
+  .then(fileList => {
+    return Promise.all(
+      fileList.map(file => fetch(`data/${file}`).then(res => res.json()))
+    );
+  })
+  .then(fileContents => {
+    const products = fileContents.flat();
+
     const categories = [...new Set(products.map(p => p.category))];
     categories.forEach(cat => {
       const option = document.createElement('option');
@@ -38,5 +45,5 @@ fetch('data/products.json')
   })
   .catch(error => {
     productGrid.innerHTML = '<p>Error loading products.</p>';
-    console.error('Failed to load JSON:', error);
+    console.error('Failed to load product files:', error);
   });
