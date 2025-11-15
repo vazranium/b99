@@ -48,17 +48,3 @@ fetch('data/manifest.json')
     console.error('Failed to load product files:', error);
   });
 
-// Page visit counter using countapi.xyz
-const counterEl = document.getElementById('visitCounter');
-const namespace = 'buy99'; // You can customize this
-const key = 'page-visits';
-
-fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
-  .then(res => res.json())
-  .then(data => {
-    counterEl.textContent = `Visits: ${data.value}`;
-  })
-  .catch(err => {
-    console.error('Visit counter error:', err);
-    counterEl.textContent = 'Visits: N/A';
-  });
